@@ -1,0 +1,16 @@
+{
+    "actorOutputSchemaVersion": 1,
+    "title": "NPI Bulk Exporter output",
+    "properties": {
+        "overview": {
+            "type": "string",
+            "title": "Providers (overview table)",
+            "template": "{{links.apiDefaultDatasetUrl}}/items?view=overview"
+        },
+        "results": {
+            "type": "string",
+            "title": "All provider fields",
+            "template": "{{links.apiDefaultDatasetUrl}}/items"
+        }
+    }
+}

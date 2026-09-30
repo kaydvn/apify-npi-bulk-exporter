@@ -1,0 +1,157 @@
+{
+    "actorSpecification": 1,
+    "fields": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "object",
+        "properties": {
+            "npi": {
+                "type": "string"
+            },
+            "entityType": {
+                "type": "string"
+            },
+            "name": {
+                "type": "string"
+            },
+            "firstName": {
+                "type": "string"
+            },
+            "middleName": {
+                "type": "string"
+            },
+            "lastName": {
+                "type": "string"
+            },
+            "credential": {
+                "type": "string"
+            },
+            "gender": {
+                "type": "string"
+            },
+            "soleProprietor": {
+                "type": "string"
+            },
+            "organizationName": {
+                "type": "string"
+            },
+            "authorizedOfficialName": {
+                "type": "string"
+            },
+            "authorizedOfficialTitle": {
+                "type": "string"
+            },
+            "authorizedOfficialPhone": {
+                "type": "string"
+            },
+            "status": {
+                "type": "string"
+            },
+            "enumerationDate": {
+                "type": "string"
+            },
+            "lastUpdated": {
+                "type": "string"
+            },
+            "primaryTaxonomyCode": {
+                "type": "string"
+            },
+            "primaryTaxonomy": {
+                "type": "string"
+            },
+            "primaryLicense": {
+                "type": "string"
+            },
+            "primaryLicenseState": {
+                "type": "string"
+            },
+            "allTaxonomies": {
+                "type": "string"
+            },
+            "practiceAddress1": {
+                "type": "string"
+            },
+            "practiceAddress2": {
+                "type": "string"
+            },
+            "practiceCity": {
+                "type": "string"
+            },
+            "practiceState": {
+                "type": "string"
+            },
+            "practiceZip": {
+                "type": "string"
+            },
+            "practiceCountry": {
+                "type": "string"
+            },
+            "practicePhone": {
+                "type": "string"
+            },
+            "practiceFax": {
+                "type": "string"
+            },
+            "mailingAddress1": {
+                "type": "string"
+            },
+            "mailingAddress2": {
+                "type": "string"
+            },
+            "mailingCity": {
+                "type": "string"
+            },
+            "mailingState": {
+                "type": "string"
+            },
+            "mailingZip": {
+                "type": "string"
+            },
+            "mailingCountry": {
+                "type": "string"
+            },
+            "mailingPhone": {
+                "type": "string"
+            },
+            "mailingFax": {
+                "type": "string"
+            },
+            "otherPracticeLocations": {
+                "type": "integer"
+            },
+            "registryUrl": {
+                "type": "string"
+            },
+            "raw": {
+                "type": [
+                    "object",
+                    "null"
+                ],
+                "description": "Full NPPES API record (only when includeRaw is on)"
+            }
+        },
+        "additionalProperties": true
+    },
+    "views": {
+        "overview": {
+            "title": "Providers",
+            "transformation": {
+                "fields": [
+                    "npi",
+                    "entityType",
+                    "name",
+                    "credential",
+                    "primaryTaxonomy",
+                    "practiceAddress1",
+                    "practiceCity",
+                    "practiceState",
+                    "practiceZip",
+                    "practicePhone",
+                    "status"
+                ]
+            },
+            "display": {
+                "component": "table"
+            }
+        }
+    }
+}

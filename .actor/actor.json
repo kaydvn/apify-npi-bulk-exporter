@@ -8,15 +8,7 @@
     "input": "./input_schema.json",
     "dockerfile": "./Dockerfile",
     "storages": {
-        "dataset": {
-            "actorSpecification": 1,
-            "views": {
-                "overview": {
-                    "title": "Providers",
-                    "transformation": { "fields": ["npi", "entityType", "name", "credential", "primaryTaxonomy", "practiceAddress1", "practiceCity", "practiceState", "practiceZip", "practicePhone", "status"] },
-                    "display": { "component": "table" }
-                }
-            }
-        }
-    }
+        "dataset": "./dataset_schema.json"
+    },
+    "output": "./output_schema.json"
 }
