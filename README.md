@@ -1,4 +1,4 @@
-# NPI Registry Bulk Exporter: full state and specialty lists, past the 1,200 cap
+# NPI Registry Scraper - NPPES Bulk Provider Export
 
 Export **every** US healthcare provider that matches a specialty, state, city or ZIP from the official **CMS NPPES NPI Registry API**. You get one flat, CSV-ready row per provider.
 

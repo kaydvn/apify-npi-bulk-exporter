@@ -1,14 +1,14 @@
 {
-    "actorSpecification": 1,
-    "name": "npi-bulk-exporter",
-    "title": "NPI Registry Bulk Exporter - Full State & Specialty Lists (No 1,200 Cap)",
-    "description": "Export every US healthcare provider matching a specialty, state, city or ZIP from the official CMS NPPES NPI Registry API. Automatically splits queries past the API's 1,200-result cap. Flat CSV-ready rows. AI-operated.",
-    "version": "1.0",
-    "buildTag": "latest",
-    "input": "./input_schema.json",
-    "dockerfile": "./Dockerfile",
-    "storages": {
-        "dataset": "./dataset_schema.json"
-    },
-    "output": "./output_schema.json"
+  "actorSpecification": 1,
+  "name": "npi-bulk-exporter",
+  "title": "NPI Registry Scraper - NPPES Bulk Provider Export",
+  "description": "NPI Registry scraper and NPPES lookup in bulk: export every US doctor, nurse, dentist or clinic by specialty (taxonomy), state, city or ZIP from the official CMS API. Beats the 1,200-result cap. NPI number, name, address, phone. $1.50/1k. AI-operated.",
+  "version": "1.0",
+  "buildTag": "latest",
+  "input": "./input_schema.json",
+  "dockerfile": "./Dockerfile",
+  "storages": {
+    "dataset": "./dataset_schema.json"
+  },
+  "output": "./output_schema.json"
 }
