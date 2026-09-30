@@ -1,0 +1,18 @@
+{
+    "title": "NPI Registry Bulk Exporter input",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "taxonomy": { "title": "Specialty / taxonomy", "type": "string", "editor": "textfield", "description": "Taxonomy description as used by NPPES, e.g. \"Dentist\", \"Family Medicine\", \"Physical Therapist\", \"Pharmacy\".", "prefill": "Dentist" },
+        "states": { "title": "States", "type": "array", "editor": "stringList", "description": "Two-letter US state codes, e.g. RI, CA. Each state is exported in full.", "prefill": ["RI"] },
+        "enumerationType": { "title": "Provider type", "type": "string", "editor": "select", "enum": ["", "NPI-1", "NPI-2"], "enumTitles": ["Both", "Individuals (NPI-1)", "Organizations (NPI-2)"], "default": "" },
+        "city": { "title": "City", "type": "string", "editor": "textfield", "description": "Optional city filter." },
+        "postalCode": { "title": "ZIP code", "type": "string", "editor": "textfield", "description": "Optional. 5-digit ZIP, or a prefix with a trailing wildcard such as 902*." },
+        "firstName": { "title": "First name", "type": "string", "editor": "textfield", "description": "Optional. Trailing wildcard allowed after 2 characters, e.g. jo*." },
+        "lastName": { "title": "Last name", "type": "string", "editor": "textfield", "description": "Optional. Trailing wildcard allowed after 2 characters." },
+        "organizationName": { "title": "Organization name", "type": "string", "editor": "textfield", "description": "Optional. Trailing wildcard allowed after 2 characters." },
+        "npiNumbers": { "title": "NPI numbers (bulk lookup)", "type": "array", "editor": "stringList", "description": "If given, the actor looks up these 10-digit NPIs and ignores the search filters." },
+        "maxResults": { "title": "Maximum results", "type": "integer", "editor": "number", "minimum": 1, "description": "Stop after this many providers. Leave empty for all.", "prefill": 1000 },
+        "includeRaw": { "title": "Include raw API record", "type": "boolean", "default": false, "description": "Add the full original NPPES JSON (all addresses, taxonomies, identifiers) to each row." }
+    }
+}

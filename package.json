@@ -1,0 +1,17 @@
+{
+  "name": "npi-bulk-exporter",
+  "version": "1.0.0",
+  "description": "Bulk export of US healthcare providers from the official NPPES NPI Registry API, past the 1,200-row query cap.",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "node src/main.js",
+    "test": "node --test test/*.test.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "apify": "^3.7.2"
+  }
+}
