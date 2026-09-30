@@ -49,6 +49,32 @@ Pay per result: **$1.50 per 1,000 providers** exported. Runs stop at the maximum
 - Verify a list of NPIs: `{ "npiNumbers": ["<NPI 1>", "<NPI 2>"] }`
 - Every pharmacy organization in Florida: `{ "taxonomy": "Pharmacy", "states": ["FL"], "enumerationType": "NPI-2", "maxResults": 50000 }`
 
+## Sample inputs
+**All dentists in Rhode Island**
+```json
+{"taxonomy":"Dentist","states":["RI"],"maxResults":1000}
+```
+**One city, any specialty**
+```json
+{"states":["TX"],"city":"AUSTIN","taxonomy":"Cardiology","maxResults":500}
+```
+**Look up specific NPI numbers**
+```json
+{"npiNumbers":["1234567893"]}
+```
+
+## Price guide
+Pay per event: $0.0015 per provider. Rough cost by volume:
+
+| providers | Cost |
+|---|---|
+| 100 | $0.15 |
+| 1,000 | $1.50 |
+| 10,000 | $15.00 |
+| 100,000 | $150.00 |
+
+The Apify free plan includes monthly credit, enough to try it. Set a maximum charge per run in the run options to cap spend.
+
 ## FAQ
 **How much does it cost?** $1.50 per 1,000 providers (a few cents for small lists). You can try it with the free monthly credit of the Apify free plan. Set `maxResults` or a maximum charge per run to cap spend.
 
