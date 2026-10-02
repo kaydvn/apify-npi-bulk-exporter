@@ -10,7 +10,7 @@ The NPPES API returns at most **1,200 results per query** (200 per page, skip â‰
 - **Bulk NPI lookup**: paste a list of 10-digit NPI numbers to verify them and enrich them with the current registry data.
 
 ## Output (one row per provider)
-`npi`, `entityType` (Individual/Organization), `name`, `firstName`, `middleName`, `lastName`, `credential`, `gender`, `organizationName`, `authorizedOfficialName` / `Title` / `Phone`, `status`, `enumerationDate`, `lastUpdated`, `primaryTaxonomyCode`, `primaryTaxonomy`, `primaryLicense`, `primaryLicenseState`, `allTaxonomies`, practice address (`practiceAddress1`, `practiceCity`, `practiceState`, `practiceZip`, `practicePhone`, `practiceFax`), the same fields for the mailing address, `otherPracticeLocations`, and `registryUrl`. Turn on **Include raw API record** to add the full original JSON.
+`npi`, `entityType` (Individual/Organization), `name`, `firstName`, `middleName`, `lastName`, `credential`, `gender`, `soleProprietor`, `organizationName`, `authorizedOfficialName` / `Title` / `Phone`, `status`, `enumerationDate`, `lastUpdated`, `primaryTaxonomyCode`, `primaryTaxonomy`, `primaryLicense`, `primaryLicenseState`, `allTaxonomies`, practice address (`practiceAddress1`, `practiceCity`, `practiceState`, `practiceZip`, `practicePhone`, `practiceFax`), the same fields for the mailing address, `otherPracticeLocations`, and `registryUrl`. Turn on **Include raw API record** to add the full original JSON.
 
 ## Input example
 ```json
@@ -18,7 +18,7 @@ The NPPES API returns at most **1,200 results per query** (200 per page, skip â‰
 ```
 
 ## Pricing
-Pay per result: **$1.50 per 1,000 providers** exported. Runs stop at the maximum charge you set for the run, or at `maxResults`.
+Pay per event: the `provider` event costs **$0.0015 per provider** exported (that is **$1.50 per 1,000 providers**). Runs stop at the maximum charge you set for the run, or at `maxResults`.
 
 ## Notes and limits
 - Data comes live from the public NPPES NPI Registry API (https://npiregistry.cms.hhs.gov/api-page), run by CMS. The registry publishes NPPES data under the Freedom of Information Act. It does **not** include email addresses.
@@ -63,8 +63,8 @@ Pay per result: **$1.50 per 1,000 providers** exported. Runs stop at the maximum
 {"npiNumbers":["1234567893"]}
 ```
 
-## Price guide
-Pay per event: $0.0015 per provider. Rough cost by volume:
+### Cost by volume
+At $0.0015 per `provider` event:
 
 | providers | Cost |
 |---|---|

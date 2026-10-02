@@ -12,7 +12,7 @@
         "lastName": { "title": "Last name", "type": "string", "editor": "textfield", "description": "Optional. Trailing wildcard allowed after 2 characters." },
         "organizationName": { "title": "Organization name", "type": "string", "editor": "textfield", "description": "Optional. Trailing wildcard allowed after 2 characters." },
         "npiNumbers": { "title": "NPI numbers (bulk lookup)", "type": "array", "editor": "stringList", "description": "If given, the actor looks up these 10-digit NPIs and ignores the search filters." },
-        "maxResults": { "title": "Maximum results", "type": "integer", "editor": "number", "minimum": 1, "description": "Stop after this many providers. Leave empty for all.", "prefill": 1000 },
+        "maxResults": { "title": "Maximum results", "type": "integer", "editor": "number", "minimum": 1, "description": "Stop after this many providers (also caps your cost). Leave empty to export all matches.", "prefill": 100 },
         "includeRaw": { "title": "Include raw API record", "type": "boolean", "default": false, "description": "Add the full original NPPES JSON (all addresses, taxonomies, identifiers) to each row." }
     }
 }
